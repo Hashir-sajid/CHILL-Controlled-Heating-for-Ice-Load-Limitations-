@@ -4,15 +4,15 @@
 #include "HX711.h"
 
 
-#define HX711_DOUT_PIN 3    // HX711 data output
-#define HX711_SCK_PIN  2    // HX711 clock pin
-#define RELAY_CTRL_PIN 7    // Relay module input pin
+#define HX711_DOUT_PIN 3    
+#define HX711_SCK_PIN  2    
+#define RELAY_CTRL_PIN 7    
 
 
 HX711 scale;
 
-float calibrationFactor = -7050.0;   // Adjust this after calibration
-const float limitKg = 2.0;           // Trigger threshold
+float calibrationFactor = -7050.0;   
+const float limitKg = 2.0;           
 
 const unsigned long HEATER_ON_MS = 60UL * 1000UL;
 const unsigned long COOLDOWN_MS  = 60UL * 1000UL;
@@ -46,7 +46,7 @@ void setup() {
   scale.set_scale(calibrationFactor);
 
   pinMode(RELAY_CTRL_PIN, OUTPUT);
-  digitalWrite(RELAY_CTRL_PIN, LOW);   // Relay off
+  digitalWrite(RELAY_CTRL_PIN, LOW);   
 
   Serial.println(F("CHILL system ready"));
   Serial.print(F("Calibration factor: "));
