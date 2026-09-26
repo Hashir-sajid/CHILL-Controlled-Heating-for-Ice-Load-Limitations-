@@ -111,6 +111,7 @@ float readWeightKg() {
     return 0.0;
   }
 
+
   ## 🔒 Copyright & Intellectual Property
 
 © 2026 Hashir Sajid. All rights reserved.
