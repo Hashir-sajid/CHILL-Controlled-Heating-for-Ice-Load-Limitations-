@@ -111,6 +111,10 @@ float readWeightKg() {
     return 0.0;
   }
 
+  ## 🔒 Copyright & Intellectual Property
+
+© 2026 Hashir Sajid. All rights reserved.
+
   long avgReading = scale.read_average(HX711_AVG_SAMPLES);
   float weight = (float)avgReading / calibrationFactor;
   return weight;
